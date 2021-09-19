@@ -1,0 +1,4 @@
+ARG PLANT
+FROM ${PLANT} as stageforcopy
+FROM alpine
+COPY --from=stageforcopy . /cf-cli

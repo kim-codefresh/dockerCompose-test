@@ -1,0 +1,12 @@
+version: "3.0"
+services:
+  my_redis_service:
+    #network_mode: host
+    image: 'redis:latest'
+  my_nginx:
+    #network_mode: host
+    image: nginx
+    volumes: 
+      - ./tmp-repo/pipeline1/test:/tmp/test
+    command: "cat /tmp/test"  
+    network_mode: service:my_redis_service
