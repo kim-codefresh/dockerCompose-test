@@ -9,3 +9,4 @@ services:
     volumes: 
       - ./dockerCompose-test/pipeline1/test:/tmp/test
     command: "cat /tmp/test"  
+    network_mode: host
