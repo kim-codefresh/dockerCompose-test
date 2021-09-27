@@ -4,9 +4,9 @@ services:
     #network_mode: host
     image: 'redis:latest'
   my_nginx:
-    #network_mode: host
+    network_mode: host
     image: nginx
     #volumes: 
     # - ./dockerCompose-test/pipeline1/test:/tmp/test
     #command: "cat /tmp/test"  
-    network_mode: service:my_redis_service
+    #network_mode: service:my_redis_service
