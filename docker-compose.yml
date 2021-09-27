@@ -6,7 +6,7 @@ services:
   my_nginx:
     #network_mode: host
     image: nginx
-    volumes: 
-     - ./dockerCompose-test/pipeline1/test:/tmp/test
-    command: "cat /tmp/test"  
+    #volumes: 
+    # - ./dockerCompose-test/pipeline1/test:/tmp/test
+    #command: "cat /tmp/test"  
     #network_mode: service:my_redis_service
